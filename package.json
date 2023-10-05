@@ -19,6 +19,7 @@
     "react-dom": "latest",
     "react-id-swiper": "^4.0.0",
     "react-spinners": "^0.13.8",
+    "styled-jsx": "^5.1.2",
     "sweetalert2": "^11.7.31",
     "swiper": "^10.3.1"
   },
