@@ -13,6 +13,7 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       screens: {
+        xl: "1280px",
         lg: "980px",
         xs: "480px",
         mn: "320px",

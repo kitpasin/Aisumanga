@@ -1,13 +1,8 @@
 "use client";
 
-import SearchIcon from "@mui/icons-material/Search";
 import {
   Button,
-  FormControl,
-  IconButton,
-  InputAdornment,
-  InputLabel,
-  OutlinedInput,
+  TextField,
 } from "@mui/material";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -28,28 +23,14 @@ function Header() {
       </Link>
       <div className="bg-white w-full h-full lg:h-auto rounded-md xl:rounded-t-md shadow-md flex flex-col">
         <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-center">
-          <FormControl
+          <div className="w-full xl:max-w-[300px] p-2">
+          <TextField
             size="small"
-            className="w-full xl:max-w-[300px] m-2 pr-4"
+            fullWidth
             variant="outlined"
-          >
-            <InputLabel size="small" htmlFor="outlined-adornment-password">
-              Search...
-            </InputLabel>
-            <OutlinedInput
-              size="small"
-              id="outlined-adornment-password"
-              type="text"
-              endAdornment={
-                <InputAdornment position="end">
-                  <IconButton>
-                    <SearchIcon />
-                  </IconButton>
-                </InputAdornment>
-              }
-              label="Search..."
+            label="Search..."
             />
-          </FormControl>
+            </div>
           <div className="w-full flex justify-start lg:justify-end items-center gap-2 px-2 xs:mb-0 mb-2">
             <Button
               className="bg-[#1976d2] hover:bg-[#1769aa] w-full xs:max-w-[100px] h-[40px] text-sm font-bold"
