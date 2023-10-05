@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useState } from "react";
@@ -12,14 +11,16 @@ function ResponsiveHeader() {
 
   return (
     <div className="mt-4 max-w-[768px] lg:max-w-[980px] m-auto px-4 xl:hidden">
-      <Button
+      <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        variant="contained"
-        className="w-full rounded-md h-[40px] bg-[#1976d2] md:hidden flex justify-between items-center px-4 text-white text-sm md:text-md font-bold"
+        className="w-full rounded-md h-[40px] bg-[#1976d2] hover:bg-[#1769aa] md:hidden flex justify-between items-center px-4 text-white text-sm md:text-md font-bold shadow-xl"
       >
-        <p className="uppercase">Page : {location === "/" ? "home" : location.split("/")[1].replace("_", " ")}</p>
+        <p className="uppercase">
+          Page :{" "}
+          {location === "/" ? "home" : location.split("/")[1].replace("_", " ")}
+        </p>
         {isMenuOpen ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}
-      </Button>
+      </button>
 
       {/* < 768 Nav */}
       <nav

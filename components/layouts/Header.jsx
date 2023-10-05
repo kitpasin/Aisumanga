@@ -1,9 +1,6 @@
 "use client";
 
-import {
-  Button,
-  TextField,
-} from "@mui/material";
+import { Button, TextField } from "@mui/material";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -24,61 +21,63 @@ function Header() {
       <div className="bg-white w-full h-full lg:h-auto rounded-md xl:rounded-t-md shadow-md flex flex-col">
         <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-center">
           <div className="w-full xl:max-w-[300px] p-2">
-          <TextField
-            size="small"
-            fullWidth
-            variant="outlined"
-            label="Search..."
+            <TextField
+              size="small"
+              fullWidth
+              variant="outlined"
+              label="Search..."
             />
-            </div>
+          </div>
           <div className="w-full flex justify-start lg:justify-end items-center gap-2 px-2 xs:mb-0 mb-2">
-            <Button
-              className="bg-[#1976d2] hover:bg-[#1769aa] w-full xs:max-w-[100px] h-[40px] text-sm font-bold"
-              size="small"
-              variant="contained"
-            >
+            <button className="bg-[#1976d2] hover:bg-[#1769aa] w-full xs:max-w-[100px] h-[40px] rounded-md text-sm text-white font-bold">
               Login
-            </Button>
-            <Button
-              className="bg-[#1976d2] hover:bg-[#1769aa] w-full xs:max-w-[100px] h-[40px] text-sm font-bold"
-              size="small"
-              variant="contained"
-            >
+            </button>
+            <button className="bg-[#1976d2] hover:bg-[#1769aa] w-full xs:max-w-[100px] h-[40px] rounded-md text-sm text-white font-bold">
               Register
-            </Button>
+            </button>
           </div>
         </div>
         <nav className="w-full h-[49px] bg-[#1976d2] rounded-b-md justify-between items-center text-white text-sm md:text-md font-bold hidden xl:flex">
           <Link
-            className={`${location === "/" && "underline bg-[#1769aa]"} w-1/5 h-full flex justify-center items-center rounded-bl-md hover:bg-[#1769aa]`}
+            className={`${
+              location === "/" && "underline bg-[#1769aa]"
+            } w-1/5 h-full flex justify-center items-center rounded-bl-md hover:bg-[#1769aa]`}
             href="/"
           >
             HOME
           </Link>
 
           <Link
-            className={`${location === "/latest_manga" && "underline bg-[#1769aa]"} w-1/5 h-full flex justify-center items-center hover:bg-[#1769aa] transition-all ease-in-out duration-300`}
+            className={`${
+              location === "/latest_manga" && "underline bg-[#1769aa]"
+            } w-1/5 h-full flex justify-center items-center hover:bg-[#1769aa] transition-all ease-in-out duration-300`}
             href="/latest_manga"
           >
             LATEST MANGA
           </Link>
 
           <Link
-            className={`${location === "/hot_manga" && "underline bg-[#1769aa]"} w-1/5 h-full flex justify-center items-center hover:bg-[#1769aa] transition-all ease-in-out duration-300`}
+            className={`${
+              location === "/hot_manga" && "underline bg-[#1769aa]"
+            } w-1/5 h-full flex justify-center items-center hover:bg-[#1769aa] transition-all ease-in-out duration-300`}
             href="/hot_manga"
           >
             HOT MANGA
           </Link>
 
           <Link
-            className={`${location === "/new_manga" && "underline bg-[#1769aa]"} w-1/5 h-full flex justify-center items-center hover:bg-[#1769aa] transition-all ease-in-out duration-300`}
+            className={`${
+              location === "/new_manga" && "underline bg-[#1769aa]"
+            } w-1/5 h-full flex justify-center items-center hover:bg-[#1769aa] transition-all ease-in-out duration-300`}
             href="/new_manga"
           >
             NEW MANGA
           </Link>
 
           <Link
-            className={`${location === "/completed_manga" && "underline bg-[#1769aa]"} w-1/5 h-full flex justify-center items-center rounded-br-md hover:bg-[#1769aa] transition-all ease-in-out duration-300`}
+            className={`${
+              location === "/completed_manga" && "underline bg-[#1769aa]"
+            } w-1/5 h-full flex justify-center items-center rounded-br-md hover:bg-[#1769aa] transition-all ease-in-out duration-300`}
             href="/completed_manga"
           >
             COMPLETED MANGA
