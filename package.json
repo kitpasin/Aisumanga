@@ -9,9 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.11",
+    "@mui/material": "^5.14.11",
+    "axios": "^1.5.1",
+    "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "next": "latest"
+    "react-id-swiper": "^4.0.0",
+    "react-spinners": "^0.13.8",
+    "sweetalert2": "^11.7.31",
+    "swiper": "^10.3.1"
   },
   "devDependencies": {
     "autoprefixer": "latest",
