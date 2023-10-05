@@ -64,7 +64,7 @@ function Manga() {
           </div>
           <hr className="bg-[#1976d2] h-0.5 rounded-md my-2" />
           <div className="w-full h-full max-h-[425.44px] flex flex-col gap-1 overflow-auto pr-1 text-sm">
-            {selectedManga[0].chapters.map((chapter) => (
+            {selectedManga[0].chapters.reverse().map((chapter) => (
               <div
                 key={chapter.chapter_id}
                 className="capitalize w-full h-full flex justify-between items-center"

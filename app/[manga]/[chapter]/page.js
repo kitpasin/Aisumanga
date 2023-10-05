@@ -3,6 +3,7 @@
 import ChapterHeader from "@/components/pages/manga/chapter/ChapterHeader"
 import { usePathname } from "next/navigation";
 import { latest_manga } from "@/data/latest_manga";
+import { useEffect } from "react";
 
 function Chapter() {
   const location = usePathname();
@@ -12,6 +13,10 @@ function Chapter() {
   const selectedChapter = selectedManga[0].chapters.filter(
     (chapter) => chapter.chapter_title === location.split("/")[2]
   );
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <main className="w-full max-w-[768px] lg:max-w-[980px] xl:max-w-[1280px] m-auto mt-4 px-4">
